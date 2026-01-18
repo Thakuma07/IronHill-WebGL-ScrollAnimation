@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IronHill Scroll Animation | thakuma.dev</title>
+
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<section class="hero">
+    <!-- IMAGE (BOTTOM LAYER) -->
+    <div class="hero-img">
+        <img src="./assets/hero-img.jpg" alt="">
+    </div>
+
+    <!-- CANVAS (MIDDLE LAYER) -->
+    <canvas class="hero-canvas"></canvas>
+
+    <!-- TEXT (TOP LAYER) -->
+    <div class="hero-header">
+        <h1>Morphogenesis</h1>
+        <p>Solid form gives way to liquid movement.</p>
+    </div>
+
+    <div class="hero-content">
+        <h2>
+            An underlying field of motion pushes and pulls the image across its
+            surface, redistributing pixels in a way that feels organic and
+            constantly in flux.
+        </h2>
+    </div>
+</section>
+
+<section class="about">
+    <p>
+        This animation is driven by a real-time WebGL displacement process where
+        interaction introduces force into the surface.
+    </p>
+</section>
+
+<!-- GSAP -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/SplitText.min.js"></script>
+
+<!-- LENIS -->
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.js"></script>
+
+<!-- MAIN MODULE -->
+<script type="module" src="./script.js"></script>
+
+</body>
+</html>
