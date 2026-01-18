@@ -1,0 +1,128 @@
+@font-face {
+    font-family: "Instrument Sans";
+    src: url(./font/InstrumentSans-Italic.ttf);
+}
+
+@font-face {
+    font-family: "Instrument Serif";
+    src: url(./font/InstrumentSerif-Italic.ttf);
+}
+
+:root {
+    --base-100: #ebf5df;
+    --base-200: #fec81d;
+    --base-300: #0f0f0f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+    font-family: "Instrument Serif", sans-serif;
+    font-weight: 500;
+    line-height: 0.9;
+}
+
+h1 {
+    font-size: clamp(4rem, 7.5vw, 10rem);
+}
+
+h2 {
+    font-size: clamp(2.5rem, 4.5vw, 5rem);
+}
+
+p {
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+/* ---------------- HERO ---------------- */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 175svh;
+    overflow: hidden;
+    background: var(--base-300);
+}
+
+/* IMAGE — BACK */
+.hero-img {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+/* CANVAS — MIDDLE */
+.hero-canvas {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* TEXT — TOP */
+.hero-header,
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: var(--base-200);
+}
+
+.hero-header {
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.hero-content {
+    height: 125svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content h2 {
+    width: 75%;
+    color: var(--base-300);
+}
+
+/* ---------------- ABOUT ---------------- */
+
+.about {
+    width: 100%;
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--base-300);
+    color: var(--base-100);
+}
+
+.about p {
+    width: 40%;
+    text-align: center;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 1000px) {
+    .hero-content h2,
+    .about p {
+        width: calc(100% - 4rem);
+    }
+}
